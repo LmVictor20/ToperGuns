@@ -1,0 +1,108 @@
+# CrackShot-like configuration template for ToperGuns
+# Only a subset of modules is supported right now. Unsupported nodes are ignored.
+
+# References:
+# - List of Modules: https://github.com/Shampaggon/CrackShot/wiki/List-of-Modules
+# - Complete Guide (Modules): https://github.com/Shampaggon/CrackShot/wiki/The-Complete-Guide-to-CrackShot#modules
+
+EXAMPLE_PISTOL:
+  Item_Information:
+    # Item_Name: Display name of the weapon (supports & color codes)
+    Item_Name: "&6Pistol"
+    # Item_Type: Bukkit Material of the item that represents the weapon
+    Item_Type: IRON_HOE
+    # Item_Lore: List of lore lines (supports & color codes)
+    Item_Lore:
+      - "&7Basic sidearm"
+
+  Shooting:
+    # Right_Click_To_Shoot: If true, only right-click triggers shooting; if false, left-click
+    Right_Click_To_Shoot: true
+    # Cancel_Right_Click_Interactions: Cancel vanilla right-click interactions while shooting
+    Cancel_Right_Click_Interactions: true
+    # Cancel_Left_Click_Block_Damage: Cancel block damage from left-click while shooting
+    Cancel_Left_Click_Block_Damage: true
+    # Projectile_Type: SNOWBALL | EGG | ARROW (currently supported)
+    Projectile_Type: SNOWBALL
+    # Projectile_Speed: Multiplier applied to initial velocity
+    Projectile_Speed: 1.4
+    # Projectile_Damage: Base damage applied on hit
+    Projectile_Damage: 6.0
+    # Bullet_Spread: Random spread in radians-like scale (small numbers recommended)
+    Bullet_Spread: 1.5
+    # Delay_Between_Shots: Cooldown in milliseconds (used if Fully_Automatic is disabled)
+    Delay_Between_Shots: 300
+    # Recoil_Amount: Basic recoil effect magnitude (visual only for now)
+    Recoil_Amount: 0.0
+    # Sounds_Shoot: List of Bukkit sounds to play on shot
+    Sounds_Shoot:
+      - CHICKEN_EGG_POP
+
+  Fully_Automatic:
+    # Enable: If true, uses Fire_Rate instead of Delay_Between_Shots
+    Enable: false
+    # Fire_Rate: Shots per second
+    Fire_Rate: 0
+
+  Ammo:
+    # Enable: Use a consumable item as ammo (e.g., ARROW, IRON_NUGGET or legacy id like 351~9)
+    Enable: false
+    Ammo_Item_ID: ARROW
+    # Ammo_Name_Check: Optional display name substring required on ammo items (supports & color codes)
+    Ammo_Name_Check: ""
+    # Take_Ammo_Per_Shot: Can be true/false or a number. true => 1, false => 0
+    Take_Ammo_Per_Shot: 1
+    # Sounds played when player has no ammo in inventory and attempts to shoot
+    Sounds_Shoot_With_No_Ammo:
+      - CLICK
+    # Sounds played right after the last piece of ammo is consumed from inventory
+    Sounds_Out_Of_Ammo:
+      - ITEM_BREAK
+
+  Reload:
+    # Enable: Enable magazine logic
+    Enable: false
+    # Starting_Amount: Bullets in mag when first used (defaults to Reload_Amount)
+    Starting_Amount: 7
+    # Reload_Amount: Magazine size (bullets per reload)
+    Reload_Amount: 7
+    # Reload_Duration: Duration in ticks (20 ticks = 1 second)
+    Reload_Duration: 40
+
+  Scope:
+    Enable: false
+    # Zoom_Amount is informational; currently only spread is affected when sneaking
+    Zoom_Amount: 2.0
+    Zoom_Bullet_Spread: 0.8
+
+  Headshot:
+    Enable: false
+    Bonus_Damage: 2.0
+
+  Explosions:
+    Enable: false
+    Explosion_Radius: 2.0
+    Explosion_Incendiary: false
+    Explosion_No_Grief: true
+
+EXAMPLE_RIFLE:
+  Item_Information:
+    Item_Name: "&bRifle"
+    Item_Type: DIAMOND_HOE
+    Item_Lore:
+      - "&7Automatic rifle"
+  Shooting:
+    Right_Click_To_Shoot: true
+    Cancel_Right_Click_Interactions: true
+    Cancel_Left_Click_Block_Damage: true
+    Projectile_Type: SNOWBALL
+    Projectile_Speed: 1.8
+    Projectile_Damage: 4.0
+    Bullet_Spread: 3.0
+    Sounds_Shoot:
+      - CHICKEN_EGG_POP
+  Fully_Automatic:
+    Enable: true
+    Fire_Rate: 8
+
+

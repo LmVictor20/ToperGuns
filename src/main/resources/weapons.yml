@@ -1,0 +1,37 @@
+PISTOL:
+  Item_Information:
+    Item_Name: "&6Pistol"
+    Item_Type: IRON_HOE
+    Item_Lore:
+      - "&7Basic sidearm"
+  Shooting:
+    Right_Click_To_Shoot: true
+    Cancel_Right_Click_Interactions: true
+    Cancel_Left_Click_Block_Damage: true
+    Projectile_Type: SNOWBALL
+    Projectile_Speed: 1.4
+    Projectile_Damage: 6.0
+    Bullet_Spread: 1.5
+    Delay_Between_Shots: 300
+    Sounds_Shoot:
+      - CHICKEN_EGG_POP
+
+RIFLE:
+  Item_Information:
+    Item_Name: "&bRifle"
+    Item_Type: DIAMOND_HOE
+    Item_Lore:
+      - "&7Automatic rifle"
+  Shooting:
+    Right_Click_To_Shoot: true
+    Cancel_Right_Click_Interactions: true
+    Cancel_Left_Click_Block_Damage: true
+    Projectile_Type: SNOWBALL
+    Projectile_Speed: 1.8
+    Projectile_Damage: 4.0
+    Bullet_Spread: 3.0
+    Sounds_Shoot:
+      - CHICKEN_EGG_POP
+  Fully_Automatic:
+    Enable: true
+    Fire_Rate: 8

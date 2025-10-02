@@ -1,0 +1,1524 @@
+GL:
+    Item_Information:
+        Item_Name: "&6Галактический разрушитель"
+        Item_Type: 278
+        Item_Lore: "&7Категория:&2 Автомат|&7Урон:&2 6|&7Перезарядка:&2 50|&7Точность:&2 85%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 2
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 6
+        Recoil_Amount: 2
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~2
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 1
+        Delay_Between_Shots_In_Burst: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 40
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 40
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Night_Vision: true
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: PISTON_RETRACT-1-2-0,PISTON_RETRACT-1-2-3
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+GL2:
+    Item_Information:
+        Item_Name: "&6Галактический разрушитель 2 ур."
+        Item_Type: 337
+        Item_Lore: "&7Категория:&2 Автомат|&7Урон:&2 8|&7Перезарядка:&2 50|&7Точность:&2 85%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 2
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 8
+        Recoil_Amount: 2
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~2
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 1
+        Delay_Between_Shots_In_Burst: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 20
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 40
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Night_Vision: true
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: PISTON_RETRACT-1-2-0,PISTON_RETRACT-1-2-3
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+ARB:
+    Item_Information:
+        Item_Name: "&4Арбалет"
+        Item_Type: 410
+        Item_Lore: "&7Категория:&2 Прочее|&7Урон:&2 10|&7Перезарядка:&2 50|&7Точность:&2 85%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Cancel_Right_Click_Interactions: true
+        Delay_Between_Shots: 20
+        Projectile_Amount: 1
+        Projectile_Speed: 1000
+        Projectile_Subtype: 152
+        Projectile_Damage: 15
+        Bullet_Spread: 0
+        Projectile_Type: arrow
+        Reset_Fall_Distance: true
+        Sounds_Shoot: FIRE-2-1-0
+    Reload:
+        Enable: true
+        Reload_Amount: 5
+        Reload_Bullets_Individually: false
+        Reload_Duration: 60
+        Sounds_Reloading: IRONGOLEM_THROW-1-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        Super_Effective: ZOMBIE-2
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: BLOCK_BREAK-152
+Rocket:
+    Item_Information:
+        Item_Name: "&4Базука"
+        Item_Type: 369
+        Item_Lore: "&7Категория:&2 Прочее|&7Урон:&2 12|&7Перезарядка:&2 55|&7Точность:&2 100%|&7Отдача:&2 -|&7Шанс крита:&2 7.5%"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 2
+        Projectile_Amount: 1
+        Projectile_Type: fireball
+        Projectile_Speed: 15
+        Sounds_Shoot: ZOMBIE_WOOD-1-0-0,FIZZ-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+    Abilities:
+        No_Fall_Damage: true
+    Reload:
+        Enable: true
+        Reload_Amount: 1
+        Reload_Duration: 40
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+        Sounds_Reloading: SKELETON_IDLE-1-0-10,PISTON_EXTEND-1-0-28,SKELETON_WALK-1-0-48
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: BLOCK_BREAK-35
+    Shrapnel:
+        Enable: true
+        Block_Type: 77
+        Amount: 14
+        Speed: 7
+    Explosions:
+        Enable: true
+        Knockback: 6
+        Damage_Multiplier: 10
+        Explosion_No_Grief: true
+        Explosion_Radius: 8
+        Sounds_Shooter: SHOOT_ARROW-1-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~9
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+C3031:
+    Item_Information:
+        Item_Name: "&2C3031"
+        Item_Lore: "&7Категория:&2 Автомат|&7Урон:&2 6|&7Перезарядка:&2 40|&7Точность:&2 40%|&7Отдача:&2 -"
+        Item_Type: 258
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Enchantment_To_Check: PROTECTION_ENVIRONMENTAL-1
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 20
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Reset_Fall_Distance: true
+        Projectile_Speed: 40
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 2
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 4
+        Delay_Between_Shots_In_Burst: 2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 5
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+        Message_Shooter: "&C**&aПопадение в Голову&C** &4+5 Урона"
+    Reload:
+        Enable: true
+        Reload_Amount: 30
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 40
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: PISTON_RETRACT-1-2-0,PISTON_RETRACT-1-2-2
+    Scope:
+        Enable: true
+        Zoom_Amount: 5
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~2
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Fall_Damage: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+Stalker:
+    Item_Information:
+        Item_Name: "&2Stalker"
+        Item_Lore: "&7Категория:&2 Автомат|&7Урон:&2 3|&7Перезарядка:&2 40|&7Точность:&2 75%|&7Отдача:&2 -"
+        Item_Type: 256
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 30
+        Projectile_Damage: 3
+        Bullet_Spread: 0
+        Sounds_Shoot: IRONGOLEM_HIT-2-2-0,SKELETON_HURT-2-2-0,ZOMBIE_WOOD-1-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~2
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 1
+        Delay_Between_Shots_In_Burst: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 45
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 40
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+A400:
+    Item_Information:
+        Item_Name: "&7A-400"
+        Item_Lore: "&7Категория:&2 Дробовик|&7Урон:&2 5|&7Перезарядка:&2 70|&7Точность:&2 0%|&7Отдача:&2 1"
+        Item_Type: 274
+        Enchantment_To_Check: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Right_Click_To_Shoot: false
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 7
+        Recoil_Amount: 4
+        Projectile_Amount: 7
+        Projectile_Type: snowball
+        Remove_Arrows_On_Impact: true
+        Projectile_Speed: 50
+        Projectile_Damage: 5
+        Bullet_Spread: 2
+        Reset_Fall_Distance: true
+        Sounds_Shoot: ZOMBIE_WOOD-1-1-0,EXPLODE-2-2-0,GHAST_FIREBALL-2-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 2
+    Reload:
+        Enable: true
+        Reload_Amount: 7
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Bullets_Individually: true
+        Reload_Duration: 30
+        Sounds_Reloading: NOTE_STICKS-2-1-0,NOTE_SNARE_DRUM-2-6-1
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: DOOR_OPEN-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 5
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 4
+        Zoom_Bullet_Spread: 2
+        Zoom_Before_Shooting: false
+        Sounds_Toggle_Zoom: ENDER_DRAGONWINGS-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~1
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+G-320:
+    Item_Information:
+        Item_Name: "&2G-320"
+        Item_Lore: "&7Категория:&2 Дробовик|&7Урон:&2 4|&7Перезарядка:&2 60|&7Точность:&2 0%|&7Отдача:&2 1"
+        Item_Type: 275
+        Enchantment_To_Check: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Right_Click_To_Shoot: false
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 7
+        Recoil_Amount: 4
+        Projectile_Amount: 5
+        Projectile_Type: snowball
+        Remove_Arrows_On_Impact: true
+        Projectile_Speed: 50
+        Projectile_Damage: 4
+        Bullet_Spread: 2
+        Reset_Fall_Distance: true
+        Sounds_Shoot: ZOMBIE_WOOD-1-1-0,EXPLODE-2-2-0,GHAST_FIREBALL-2-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 2
+    Reload:
+        Enable: true
+        Reload_Amount: 12
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Bullets_Individually: true
+        Reload_Duration: 30
+        Sounds_Reloading: NOTE_STICKS-2-1-0,NOTE_SNARE_DRUM-2-6-1
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: DOOR_OPEN-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 5
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 4
+        Zoom_Bullet_Spread: 2
+        Zoom_Before_Shooting: false
+        Sounds_Toggle_Zoom: ENDER_DRAGONWINGS-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~1
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+ZX-11:
+    Item_Information:
+        Item_Name: "&7ZX-11"
+        Item_Lore: "&7Категория:&2 Дробовик|&7Урон:&2 3|&7Перезарядка:&2 45|&7Точность:&2 0%|&7Отдача:&2 -"
+        Item_Type: 292
+        Enchantment_To_Check: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Right_Click_To_Shoot: false
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 7
+        Recoil_Amount: 4
+        Projectile_Amount: 6
+        Projectile_Type: snowball
+        Remove_Arrows_On_Impact: true
+        Projectile_Speed: 50
+        Projectile_Damage: 3
+        Bullet_Spread: 2
+        Reset_Fall_Distance: true
+        Sounds_Shoot: ZOMBIE_WOOD-1-1-0,EXPLODE-2-2-0,GHAST_FIREBALL-2-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 2
+    Reload:
+        Enable: true
+        Reload_Amount: 20
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Bullets_Individually: true
+        Reload_Duration: 30
+        Sounds_Reloading: NOTE_STICKS-2-1-0,NOTE_SNARE_DRUM-2-6-1
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: DOOR_OPEN-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 5
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 4
+        Zoom_Bullet_Spread: 2
+        Zoom_Before_Shooting: false
+        Sounds_Toggle_Zoom: ENDER_DRAGONWINGS-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~1
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+X-440:
+    Item_Information:
+        Item_Name: "&7X-440"
+        Item_Lore: "&7Категория:&2 Снайперка|&7Урон:&2 4|&7Перезарядка:&2 35|&7Точность:&2 100%|&7Отдача:&2 -"
+        Item_Type: 273
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 5
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: BLAZE_HIT-4-10-0,EXPLODE-4-50-0,
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 8
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 50
+        Sounds_Reloading: NOTE_STICKS-2-1-0
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+        Sound_Open: NOTE_STICKS-2-0-0,PISTON_RETRACT-2-2-2
+        Sound_Close: PISTON_EXTEND-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 10
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+        Message_Victim: "&cThis is it..."
+    Abilities:
+        Reset_Hit_Cooldown: true
+        Knockback: 8
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: BLOCK_BREAK-50
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Fireworks:
+        Enable: true
+        Firework_Headshot: BURST-FALSE-TRUE-200-80-10
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 8
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-3,WEAKNESS-120-1,BLINDNESS-60-1,HUNGER-1200-2,CONFUSION-60-1
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~4
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+Bdit:
+    Item_Information:
+        Item_Name: "&7Бдительный"
+        Item_Lore: "&7Категория:&2 Снайперка|&7Урон:&2 7|&7Перезарядка:&2 50|&7Точность:&2 100%|&7Отдача:&2 2"
+        Item_Type: 284
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 4
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 7
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: BLAZE_HIT-4-10-0,EXPLODE-4-50-0,
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 8
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 50
+        Sounds_Reloading: NOTE_STICKS-2-1-0
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+        Sound_Open: NOTE_STICKS-2-0-0,PISTON_RETRACT-2-2-2
+        Sound_Close: PISTON_EXTEND-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 10
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+        Message_Victim: "&cThis is it..."
+    Abilities:
+        Reset_Hit_Cooldown: true
+        Knockback: 8
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: BLOCK_BREAK-50
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Fireworks:
+        Enable: true
+        Firework_Headshot: BURST-FALSE-TRUE-200-80-10
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 8
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-120-3,WEAKNESS-120-1,BLINDNESS-60-1,HUNGER-120-2,CONFUSION-60-1
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~4
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+k-7:
+    Item_Information:
+        Item_Name: "&2K-7"
+        Item_Type: 271
+        Item_Lore: "&7Категория:&2 Пистолет|&7Урон:&2 7|&7Перезарядка:&2 35|&7Точность:&2 70%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 7
+        Bullet_Spread: 0   //разброс
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 8
+        Reload_Duration: 45
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Sounds_Reloading: LEVEL_UP-2-2-10,FIRE_IGNITE-2-2-38
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~3
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Scope:
+        Enable: true
+        Zoom_Amount: 4
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 4
+        Sounds_Shooter: NOTE_SNARE_DRUM-2-2-0,NOTE_STICKS-2-2-1
+        Sounds_Victim: SLIME_WALK-2-1-0,SKELETON_HURT-2-2-1
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: block_break-1
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+
+AAMMO:
+    Item_Information:
+        Item_Name: "&2Автоматные патроны"
+        Item_Type: 351~2
+        Remove_Unused_Tag: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+
+DAMMO:
+    Item_Information:
+        Item_Name: "&2Патроны для снайперки"
+        Item_Type: 351~4
+        Remove_Unused_Tag: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+
+PAMMO:
+    Item_Information:
+        Item_Name: "&2Пистолетные патроны"
+        Item_Type: 351~3
+        Remove_Unused_Tag: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+
+SAMMO:
+    Item_Information:
+        Item_Name: "&2Патроны для дробовика"
+        Item_Type: 351~1
+        Remove_Unused_Tag: true
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0	
+
+MK-1:
+    Item_Information:
+        Item_Name: "&8MK-1"
+        Item_Type: 269
+        Item_Lore: "&7Категория:&2 Пистолет|&7Урон:&2 3|&7Перезарядка:&2 25|&7Точность:&2 70%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 3
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 2
+        Bullet_Spread: 2
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 20
+        Reload_Duration: 25
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Sounds_Reloading: LEVEL_UP-2-2-10,FIRE_IGNITE-2-2-38
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~3
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Firearm_Action:
+        Type: slide
+        Open_Duration: 5
+        Close_Duration: 5
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Scope:
+        Enable: true
+        Zoom_Amount: 3
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+        Sounds_Shooter: NOTE_SNARE_DRUM-2-2-0,NOTE_STICKS-2-2-1
+        Sounds_Victim: SLIME_WALK-2-1-0,SKELETON_HURT-2-2-1
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-3,WEAKNESS-60-1
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: block_break-1
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+
+Teror:
+    Item_Information:
+        Item_Name: "&6Teror"
+        Item_Type: 270
+        Item_Lore: "&7Категория:&2 Пистолет|&7Урон:&2 6|&7Перезарядка:&2 30|&7Точность:&2 50%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 15
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 25
+        Sounds_Reloading: LEVEL_UP-2-2-10,FIRE_IGNITE-2-2-38
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 7
+        Close_Duration: 7
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~3
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Scope:
+        Enable: true
+        Zoom_Amount: 5
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0,CAT_HISS-2-1-1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 5
+        Sounds_Shooter: NOTE_SNARE_DRUM-2-2-0,NOTE_STICKS-2-2-1
+        Sounds_Victim: SLIME_WALK-2-1-0,SKELETON_HURT-2-2-1
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: block_break-4
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+Z-311:
+    Item_Information:
+        Item_Name: "&7Z-311"
+        Item_Type: 290
+        Item_Lore: "&7Категория:&2 Пистолет|&7Урон:&2 4|&7Перезарядка:&2 20|&7Точность:&2 50%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 16
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 25
+        Sounds_Reloading: LEVEL_UP-2-2-10,FIRE_IGNITE-2-2-38
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 7
+        Close_Duration: 7
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~3
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Scope:
+        Enable: true
+        Zoom_Amount: 5
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0,CAT_HISS-2-1-1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 8
+        Sounds_Shooter: NOTE_SNARE_DRUM-2-2-0,NOTE_STICKS-2-2-1
+        Sounds_Victim: SLIME_WALK-2-1-0,SKELETON_HURT-2-2-1
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: block_break-4
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+
+BobaFett:
+    Item_Information:
+        Item_Name: "&6Boba Fett"
+        Item_Type: 277
+        Item_Lore: "&7Категория:&2 Пистолет|&7Урон:&2 6|&7Перезарядка:&2 45|&7Точность:&2 30%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Dual_Wield: true 
+        Delay_Between_Shots: 5
+        Recoil_Amount: 1
+        Projectile_Amount: 2
+        Projectile_Type: snowball
+        Projectile_Speed: 100
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~3
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Reload:
+        Enable: true
+        Reload_Amount: 8
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 25
+        Sounds_Reloading: LEVEL_UP-2-2-10,FIRE_IGNITE-2-2-38
+    Firearm_Action:
+        Type: slide
+        Open_Duration: 7
+        Close_Duration: 7
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Scope:
+        Enable: true
+        Zoom_Amount: 7
+        Night_Vision: true
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0,CAT_HISS-2-1-1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 4
+        Sounds_Shooter: NOTE_SNARE_DRUM-2-2-0,NOTE_STICKS-2-2-1
+        Sounds_Victim: SLIME_WALK-2-1-0,SKELETON_HURT-2-2-1
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-2,WEAKNESS-30-1
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: block_break-98
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+
+L-336:
+    Item_Information:
+        Item_Name: "&6L-336"
+        Item_Lore: "&7Категория:&2 Снайперка|&7Урон:&2 14|&7Перезарядка:&2 32|&7Точность:&2 100%|&7Отдача:&2 2"
+        Item_Type: 285
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 13
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: BLAZE_HIT-2-1-0,EXPLODE-2-50-0,HURT_FLESH-2-50-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 5	
+        Reload_Bullets_Individually: true
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 10
+        Sounds_Reloading: NOTE_STICKS-2-1-0
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+        Sound_Open: NOTE_STICKS-2-0-0,PISTON_RETRACT-2-2-2
+        Sound_Close: PISTON_EXTEND-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 12
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+        Message_Victim: "&cI... I need help now!"
+    Abilities:
+        Reset_Hit_Cooldown: true
+        Knockback: 8
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: BLOCK_BREAK-50
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Fireworks:
+        Enable: true
+        Firework_Headshot: BURST-FALSE-TRUE-200-80-10
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 8
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-3,WEAKNESS-120-1,BLINDNESS-60-1
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~4
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+CK:
+    Item_Information:
+        Item_Name: "&2Черный Коготь"
+        Item_Lore: "&7Категория:&2 Снайперка|&7Урон:&2 11|&7Перезарядка:&2 32|&7Точность:&2 100%|&7Отдача:&2 2"
+        Item_Type: 285
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 4
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 11
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: BLAZE_HIT-2-1-0,EXPLODE-2-50-0,HURT_FLESH-2-50-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 5	
+        Reload_Bullets_Individually: true
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 10
+        Sounds_Reloading: NOTE_STICKS-2-1-0
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+        Sound_Open: NOTE_STICKS-2-0-0,PISTON_RETRACT-2-2-2
+        Sound_Close: PISTON_EXTEND-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 12
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+        Message_Victim: "&cI... I need help now!"
+    Abilities:
+        Reset_Hit_Cooldown: true
+        Knockback: 2
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: BLOCK_BREAK-50
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Fireworks:
+        Enable: true
+        Firework_Headshot: BURST-FALSE-TRUE-200-80-10
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 8
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-3,WEAKNESS-120-1,BLINDNESS-60-1
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~4
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+
+ARP:
+    Item_Information:
+        Item_Name: "&4Разрушитель"
+        Item_Type: 294
+        Item_Lore: "&7Категория:&2 Снайперка|&7Урон:&2 16|&7Перезарядка:&2 15|&7Точность:&2 100%|&7Отдача:&2 2"
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 5
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 16
+        Bullet_Spread: 0
+        Reset_Fall_Distance: true
+        Sounds_Shoot: BLAZE_HIT-4-10-0,EXPLODE-4-50-0,
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 6
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 50
+        Sounds_Reloading: NOTE_STICKS-2-1-0
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+        Sound_Open: NOTE_STICKS-2-0-0,PISTON_RETRACT-2-2-2
+        Sound_Close: PISTON_EXTEND-2-2-0
+    Headshot:
+        Enable: true
+        Bonus_Damage: 10
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+        Message_Victim: "&cThis is it..."
+    Abilities:
+        Reset_Hit_Cooldown: true
+        Knockback: 8
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: BLOCK_BREAK-50
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Fireworks:
+        Enable: true
+        Firework_Headshot: BURST-FALSE-TRUE-200-80-10
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 8
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-3,WEAKNESS-120-1,BLINDNESS-60-1,HUNGER-1200-2,CONFUSION-60-1
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~4
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Crafting:
+        Enable: true
+        Quantity: 1
+        Shaped: false
+        Ingredients: 334,351~14,338
+V-31:
+    Item_Information:
+        Item_Name: "&2V-31"
+        Item_Lore: "&7Категория:&2 Автомат|&7Урон:&2 6|&7Перезарядка:&2 35|&7Точность:&2 85%|&7Отдача:&2 -"
+        Item_Type: 257
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 2
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 100
+        Projectile_Damage: 6
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~2
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Headshot:
+        Enable: true
+        Bonus_Damage: 1
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 2
+        Delay_Between_Shots_In_Burst: 3
+    Reload:
+        Enable: true
+        Reload_Amount: 30
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 40
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: PISTON_RETRACT-1-2-0,PISTON_RETRACT-1-2-3
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+N-133:
+    Item_Information:
+        Item_Name: "&6N-133"
+        Item_Lore: "&7Категория:&2 Пулемёты|&7Урон:&2 4|&7Перезарядка:&2 80|&7Точность:&2 30%|&7Отдача:&2 -"
+        Item_Type: 279
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 3
+        Recoil_Amount: 2
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Remove_Arrows_On_Impact: true
+        Projectile_Speed: 90
+        Projectile_Damage: 2
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~10
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0		
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 3
+        Delay_Between_Shots_In_Burst: 3    
+    Reload:
+        Enable: true
+        Reload_Amount: 50
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 80
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: PISTON_RETRACT-2-2-0,PISTON_RETRACT-2-2-1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+        Message_Shooter: "&0HEADSHOT "
+        Message_Victim:
+        Sounds_Shooter:
+        Sounds_Victim:
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Scope:
+        Enable: true
+        Night_Vision: false
+        Zoom_Amount: 6
+        Zoom_Bullet_Spread: 0
+        Zoom_Before_Shooting: false
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+PT:
+    Item_Information:
+        Item_Name: "&2Пулемётные патроны"
+        Item_Type: 351~10
+        Skip_Name_Check: true
+        Remove_Unused_Tag: true
+BobaFettlvl:
+    Item_Information:
+        Item_Name: "&6Boba Fett 2 ур."
+        Item_Type: 154
+        Item_Lore: "&7Категория:&2 Пистолет|&7Урон:&2 7|&7Перезарядка:&2 45|&7Точность:&2 35%|&7Отдача:&2 -"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Dual_Wield: true 
+        Delay_Between_Shots: 2
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 50
+        Projectile_Damage: 5
+        Bullet_Spread: 0
+        Sounds_Shoot: PIG_DEATH-1-1-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~3
+        Take_Ammo_Per_Shot: false
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Reload:
+        Enable: true
+        Reload_Amount: 12
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 25
+        Sounds_Reloading: LEVEL_UP-2-2-10,FIRE_IGNITE-2-2-38
+    Firearm_Action:
+        Type: slide
+        Open_Duration: 7
+        Close_Duration: 7
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+    Scope:
+        Enable: true
+        Zoom_Amount: 7
+        Night_Vision: true
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0,CAT_HISS-2-1-1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 5
+        Sounds_Shooter: NOTE_SNARE_DRUM-2-2-0,NOTE_STICKS-2-2-1
+        Sounds_Victim: SLIME_WALK-2-1-0,SKELETON_HURT-2-2-1
+    Potion_Effects:
+        Activation: head
+        Potion_Effect_Victim: SLOW-1200-2,WEAKNESS-30-1
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: block_break-98
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46    
+Stalker2:
+    Item_Information:
+        Item_Name: "&2Stalker 2 ур."
+        Item_Lore: "&7Категория:&2 Автомат|&7Урон:&2 4|&7Перезарядка:&2 40|&7Точность:&2 75%|&7Отдача:&2 -"
+        Item_Type: 256
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 10
+        Recoil_Amount: 3
+        Projectile_Amount: 45
+        Projectile_Type: snowball
+        Projectile_Speed: 40
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+        Sounds_Shoot: IRONGOLEM_HIT-2-2-0,SKELETON_HURT-2-2-0,ZOMBIE_WOOD-1-2-0
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~2
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: smoke
+        Particle_Hit: block_break-55
+        Particle_Headshot: block_break-46
+    Headshot:
+        Enable: true
+        Bonus_Damage: 1
+        Sounds_Shooter: NOTE_PLING-2-2-0
+        Sounds_Victim: NOTE_PLING-2-2-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 2
+        Delay_Between_Shots_In_Burst: 3
+    Reload:
+        Enable: true
+        Reload_Amount: 45
+        Take_Ammo_As_Magazine: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 40
+        Sounds_Out_Of_Ammo: ITEM_BREAK-2-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-1-4,DOOR_OPEN-2-2-6,FIRE_IGNITE-2-1-36,HURT_FLESH-2-0-37,DOOR_CLOSE-2-2-38
+    Firearm_Action:
+        Type: slide
+        Close_Duration: 10
+        Sound_Close: PISTON_RETRACT-1-2-0,PISTON_RETRACT-1-2-3
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-2-2-0
+Flamethrower:
+    Item_Information:
+        Item_Name: "&6Огнемет"
+        Item_Type: 259
+        Item_Lore: "&7Категория:&2 Прочее|&7Урон:&2 3|&7Перезарядка:&2 40|&7Точность:&2 70%|&7Отдача:&2 -"
+        Skip_Name_Check: true
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Delay_Between_Shots: 2
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 17
+        Projectile_Damage: 3
+        Projectile_Flames: true
+        Projectile_Incendiary:
+            Enable: true
+            Duration: 95
+        Bullet_Spread: 1
+        Sounds_Shoot: FIRE-2-1-0 
+    Reload:
+        Enable: true
+        Reload_Amount: 50
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+        Reload_Duration: 27
+        Sounds_Reloading: CHEST_OPEN-1-1-0,WATER-2-2-10,CHEST_CLOSE-1-1-30    
+    Abilities:
+        Reset_Hit_Cooldown: false
+        No_Fall_Damage: true
+    Hit_Events:
+        Enable: true
+        Sounds_Shooter: SHOOT_ARROW-0.3-2-0
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 2
+        Delay_Between_Shots_In_Burst: 2
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: flames-1
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: 351~10
+        Sounds_Out_Of_Ammo: NOTE_PLING-2-2-0
+        Sounds_Shoot_With_No_Ammo: NOTE_STICKS-2-2-0
+FireCrossbow:
+    Item_Information:
+        Item_Name: "&7&lОгненный арбалет"
+        Item_Lore: "&7Тип: &2Арбалет|&7Урон: &22|&7Урон в голову: &24|&7Патронов в обойме: &21|&7Скорострельность: &4Низкая|&7Точность: &270% &7(&580%&7)|&7Можно приблизить|&7Поджигает цель на 4 сек.|&7Не требует патронов"
+        Item_Type: 281
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Item_Has_Durability: true
+        Skip_Name_Check: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 0
+        Projectile_Amount: 1
+        Projectile_Type: arrow
+        Remove_Arrows_On_Impact: true
+        Projectile_Speed: 24
+        Projectile_Damage: 2
+        Projectile_Flames: true
+        Bullet_Spread: 0.5
+        Projectile_Incendiary:
+            Enable: true
+            Duration: 100
+        Sounds_Shoot: PORTAL_TRIGGER-1-2-0
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0.4
+    Reload:
+        Enable: true
+        Reload_Amount: 1
+        Take_Ammo_On_Reload: false
+        Reload_Duration: 20
+        Sounds_Reloading: LAVA_POP-2-5-0
+    Firearm_Action:
+        Type: break
+    Abilities:
+        Reset_Hit_Cooldown: false
+        No_Fall_Damage: false
+        Knockback: 2
+    Hit_Events:
+        Enable: true
+    Scope:
+        Enable: true
+        Night_Vision: true
+        Zoom_Amount: 5
+        Zoom_Bullet_Spread: 0
+        Sounds_Toggle_Zoom: ENDERDRAGON_WINGS-2-2-0
+    Particles:
+        Enable: true
+        Particle_Impact_Anything: smoke
+        Particle_Headshot: BLOCK_BREAK-55
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+        Sounds_Shooter: NOTE_PLING-1-2-0
+        Sounds_Victim: HURT-1-1-0

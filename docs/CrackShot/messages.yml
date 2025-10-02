@@ -1,0 +1,32 @@
+#Visit the Complete Guide to CrackShot for information on everything in the configuration.
+#https://github.com/Shampaggon/CrackShot/wiki/The-Complete-Guide-to-CrackShot
+
+#These are the messages most likely to be seen by the ordinary, non-administrative player.
+#Feel free to customize them to your liking.
+#
+#Notes:
+# - Some messages use special variables, such as "<amount>", "<item>" and "<cross>".
+#   They represent numbers, weapon names and the multiplication sign.
+# - It is good practice to surround all messages with quotes (").
+# - To completely hide a message, provide an empty message. (i.e. Store_Created: "")
+# - Color codes are not supported.
+
+#Permission-related messages.
+NP_Weapon_Use: "У вас нет разрешения использовать это."
+NP_Weapon_Craft: "У вас нет разрешения, чтобы скрафтить этого."
+NP_Store_Create: "У вас нет разрешения на создание этого магазина."
+NP_Store_Purchase: "У вас нет разрешения на покупку этого товара."
+
+#Store-related messages.
+Store_Created: "Магазин успешно создан!"
+Store_Cannot_Afford: "Вы не можете купить этот товар."
+Store_Items_Needed: "Тебе нужно <amount> <item>."
+Store_Purchased: "Товар приобретен - <item>"
+
+#The message displayed when the reload command is used on a weapon that cannot be reloaded.
+#Not to be confused with "/shot config reload", which reloads the configuration.
+Cannot_Reload: "Это оружие нельзя перезагрузить."
+
+#The message displayed when a player receives a weapon given with the give command.
+#The command in question has the format "/shot give <user> <weapon> <#>".
+Weapon_Received: "Полученный пакет - <item> <cross><amount>"

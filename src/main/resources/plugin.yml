@@ -1,0 +1,9 @@
+name: ToperGuns
+main: org.lmvictor20.toperguns.ToperGunsPlugin
+version: ${project.version}
+author: LmVictor20
+commands:
+  giveweapon:
+    description: Give a weapon by title
+    usage: /giveweapon <player> <weaponTitle> [amount]
+

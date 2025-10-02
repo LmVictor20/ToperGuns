@@ -1,0 +1,78 @@
+Jumper:
+    Item_Information:
+        Item_Name: "&bДжампер"
+        Item_Type: 405
+        Item_Lore: "&bДжампер &8-&7 происходит отталкивание от земли|&7в 12-15 блоков вверх|&7Предмет для:&c всех|&7Предмет&c выпадает|"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Disable: false
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Cancel_Right_Click_Interactions: true
+        Recoil_Amount: -12
+        Projectile_Amount: 0
+        Projectile_Type: snowball
+        Delay_Between_Shots: 10
+        Projectile_Speed: 1
+        Projectile_Damage: 0
+        Bullet_Spread: 3
+        Sounds_Shoot: GHAST_FIREBALL-2-1-0,GHAST_FIREBALL-2-2-4,GHAST_FIREBALL-2-3-8,GHAST_FIREBALL-2-4-12
+    Sneak:
+        Enable: false
+    Reload:
+        Enable: true
+        Reload_Amount: 3
+        Reload_Duration: 40
+        Reload_Bullets_Individually: true
+        Take_Ammo_On_Reload: true
+        Sounds_Out_Of_Ammo: CLICK-1-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-2-20
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: smoke
+    Abilities:
+        No_Fall_Damage: true
+Jetpack:
+    Item_Information:
+        Item_Name: "&6&l$ &4&lДжетпак &6&l$"
+        Item_Type: 409
+        Item_Lore: "&eУдерживайте правую кнопку мыши для полёта|&eПока предмет в руке, Вам не наносится урон от падений"
+        Sounds_Acquired: BAT_TAKEOFF-1-1-0
+        Skip_Name_Check: true
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: -8
+        Projectile_Amount: 0
+        Projectile_Type: snowball
+        Projectile_Speed: 1
+        Projectile_Damage: 0
+        Bullet_Spread: 3
+        Sounds_Shoot: GHAST_FIREBALL-2-2-2
+    Reload:
+        Enable: true
+        Reload_Amount: 50
+        Reload_Bullets_Individually: true
+        Take_Ammo_On_Reload: true
+        Reload_Duration: 10
+        Sounds_Out_Of_Ammo: CLICK-1-1-0
+        Sounds_Reloading: FIRE_IGNITE-2-2-38
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+        Sound_Open: DOOR_OPEN-2-2-0
+        Sound_Close: DOOR_CLOSE-2-2-0
+    Particles:
+        Enable: true
+        Particle_Player_Shoot: smoke
+    Abilities:
+        No_Fall_Damage: true 
