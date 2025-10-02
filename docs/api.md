@@ -1,28 +1,34 @@
-## ToperGuns API Guide
+## ToperGuns Public API
 
-This document describes how to interact with the ToperGuns plugin from your own Bukkit/Spigot/Paper plugins. It covers setup, the `ToperGunsPlugin` entrypoint, the `WeaponManager` API, emitted events, and command/config integration.
+This document describes the minimal public API exposed for external plugins, plus existing internal hooks for backward compatibility.
 
 ### Requirements
 - Server: Spigot or Paper (tested with modern Bukkit APIs).
 - Dependency: Add the built ToperGuns JAR to your plugin's build path, or install it to your local Maven repository and depend on it. Package names live under `org.lmvictor20.toperguns`.
 
-### Getting the plugin instance
-- Static accessor: `ToperGunsPlugin.getInstance()`
-- From Bukkit: `Bukkit.getPluginManager().getPlugin("ToperGuns")` and cast if needed.
+### Obtaining the API
+Use Bukkit Services or the static accessor:
 
 ```java
-import org.lmvictor20.toperguns.ToperGunsPlugin;
+import org.lmvictor20.toperguns.api.Guns;
+import org.lmvictor20.toperguns.api.GunsAPI;
 
-ToperGunsPlugin tg = ToperGunsPlugin.getInstance();
+GunsAPI api = Guns.api(); // null if plugin not present
 ```
 
-## WeaponManager
-The `WeaponManager` loads, parses, and provides access to weapon definitions and their item forms.
+Or via ServicesManager directly:
 
-Get it:
 ```java
-WeaponManager wm = ToperGunsPlugin.getInstance().getWeaponManager();
+GunsAPI api = org.bukkit.Bukkit.getServicesManager().load(org.lmvictor20.toperguns.api.GunsAPI.class);
 ```
+
+## Listing and reading weapons
+```java
+java.util.Collection<String> ids = api.getWeaponIds();
+java.util.Optional<org.lmvictor20.toperguns.api.WeaponDefinition> def = api.getWeapon("PISTOL");
+```
+
+`WeaponDefinition` DTO includes: `id()`, `displayName()`, `baseDamage()`, `knockbackForce()`.
 
 ### Methods
 - `void reload()`
@@ -47,7 +53,11 @@ WeaponManager wm = ToperGunsPlugin.getInstance().getWeaponManager();
   - Legacy `weapons:` simple format (backward-compat)
 
 ## Events
-All events live under `org.lmvictor20.toperguns.event.WeaponEvents` and extend a `Base` class that implements `org.bukkit.event.Cancellable`. Subscribe via standard Bukkit `@EventHandler`.
+New public events live under `org.lmvictor20.toperguns.api.event`:
+- `GunsPreShootEvent(Player player, String weaponId, ItemStack weaponItem)` — cancellable, fired before ammo consumption and projectile spawn.
+- `GunsDamageEvent(Player shooter, Entity victim, Projectile projectile|null, String weaponId, double damage, double knockbackForce)` — cancellable, damage/knockback are mutable.
+
+Internal legacy events remain in `org.lmvictor20.toperguns.event.WeaponEvents`.
 
 ### Currently emitted
 - `WeaponPrepareShootEvent(Player player, String weaponTitle)`
@@ -73,39 +83,36 @@ All events live under `org.lmvictor20.toperguns.event.WeaponEvents` and extend a
 ```java
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.lmvictor20.toperguns.event.WeaponEvents;
+import org.lmvictor20.toperguns.api.event.GunsPreShootEvent;
+import org.lmvictor20.toperguns.api.event.GunsDamageEvent;
 
 public final class GunsListener implements Listener {
   @EventHandler
-  public void onPrepare(WeaponEvents.WeaponPrepareShootEvent e) {
-    // Block shooting in a safe region
-    boolean inSafe = /* your region check */ false;
-    if (inSafe) e.setCancelled(true);
+  public void onPreShoot(GunsPreShootEvent e) {
+    if (e.getWeaponId().equals("RIFLE")) e.setCancelled(true);
   }
 
   @EventHandler
-  public void onPreShoot(WeaponEvents.WeaponPreShootEvent e) {
-    // Reduce spread for VIPs
-    if (e.getPlayer().hasPermission("vip")) {
-      e.setBulletSpread(Math.max(0.0, e.getBulletSpread() * 0.6));
+  public void onDamage(GunsDamageEvent e) {
+    if ("PISTOL".equals(e.getWeaponId())) {
+      e.setDamage(e.getDamage() * 0.8);
+      e.setKnockbackForce(e.getKnockbackForce() + 2.0);
     }
-  }
-
-  @EventHandler
-  public void onDamage(WeaponEvents.WeaponDamageEntityEvent e) {
-    // Scale damage in arenas
-    double scaled = e.getDamage() * 0.85;
-    e.setDamage(scaled);
   }
 }
 ```
 
-## Commands
-- `giveweapon` — `/giveweapon <player> <weaponTitle> [amount]`
-  - Spawns configured weapon items and adds to target inventory.
+## Creating and recognizing items
+```java
+org.bukkit.inventory.ItemStack pistol = api.createWeaponItem("PISTOL", 1);
+java.util.Optional<String> id = api.getWeaponId(pistol);
+```
 
-## Configuration integration
-- Main file: `plugins/ToperGuns/weapons.yml` (see defaults in the JAR under `src/main/resources`).
+Items embed a hidden lore marker `[TG:id=<weaponId>]` to provide stable recognition on 1.8.
+
+## Configuration
+- Main file: `plugins/ToperGuns/weapons.yml` (top-level keys are canonical weapon ids).
+- `config.yml` supports optional `aliases:` map (legacyId -> canonicalId).
 - Extra files: any `*.yml` under `plugins/ToperGuns/weapons/` are also parsed (CrackShot-like structure).
 - Reload programmatically:
 ```java

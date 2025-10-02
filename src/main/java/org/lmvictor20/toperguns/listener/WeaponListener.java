@@ -26,6 +26,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.lmvictor20.toperguns.ToperGunsPlugin;
 import org.lmvictor20.toperguns.event.WeaponEvents;
+import org.lmvictor20.toperguns.api.event.GunsPreShootEvent;
+import org.lmvictor20.toperguns.api.event.GunsDamageEvent;
+import org.lmvictor20.toperguns.api.MetadataKeys;
 import org.lmvictor20.toperguns.weapon.WeaponDefinition;
 import org.lmvictor20.toperguns.weapon.WeaponManager;
 
@@ -230,6 +233,9 @@ public class WeaponListener implements Listener {
         WeaponEvents.WeaponPreShootEvent pre = new WeaponEvents.WeaponPreShootEvent(p, title, effectiveSpread);
         Bukkit.getPluginManager().callEvent(pre);
         if (pre.isCancelled()) { e.setCancelled(true); return; }
+        GunsPreShootEvent apiPre = new GunsPreShootEvent(p, title, inHand);
+        Bukkit.getPluginManager().callEvent(apiPre);
+        if (apiPre.isCancelled()) { e.setCancelled(true); return; }
 
         // Apply abilities: no fall damage right after shooting
         if (def.resetFallDistance) {
@@ -394,9 +400,15 @@ public class WeaponListener implements Listener {
         if (def.projectileIncendiaryEnable) {
             proj.setFireTicks(Math.max(100, def.projectileIncendiaryDurationTicks));
         }
-        // Store damage in metadata via entity custom name
-        proj.setCustomName("TG|" + plugin.getWeaponManager().getWeaponTitle(p.getItemInHand()) + "|" + def.damage);
+        // Store identifiers in both metadata and custom name (1.8 compatible)
+        String weaponId = plugin.getWeaponManager().getWeaponTitle(p.getItemInHand());
+        proj.setCustomName("TG|" + weaponId + "|" + def.damage);
         proj.setCustomNameVisible(false);
+        try {
+            proj.setMetadata(MetadataKeys.GUN_WEAPON_ID, new org.bukkit.metadata.FixedMetadataValue(plugin, weaponId));
+            proj.setMetadata(MetadataKeys.GUN_DAMAGE, new org.bukkit.metadata.FixedMetadataValue(plugin, def.damage));
+            proj.setMetadata(MetadataKeys.GUN_FORCE, new org.bukkit.metadata.FixedMetadataValue(plugin, Math.max(0.0, def.abilityKnockback)));
+        } catch (Throwable ignored) {}
         // Delayed removal or drag
         if (def.removalOrDragDelayTicks > 0) {
             Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
@@ -478,10 +490,16 @@ public class WeaponListener implements Listener {
             for (Entity e : cursor.getWorld().getNearbyEntities(cursor, r, r, r)) {
                 if (e instanceof LivingEntity && e != p) {
                     LivingEntity victim = (LivingEntity) e;
-                    WeaponEvents.WeaponDamageEntityEvent we = new WeaponEvents.WeaponDamageEntityEvent(p, plugin.getWeaponManager().getWeaponTitle(p.getItemInHand()), victim, p, def.damage);
-                    Bukkit.getPluginManager().callEvent(we);
-                    if (!we.isCancelled()) {
-                        victim.damage(Math.max(0.0, we.getDamage()), p);
+                    String wid = plugin.getWeaponManager().getWeaponTitle(p.getItemInHand());
+                    double kb = Math.max(0.0, def.abilityKnockback);
+                    GunsDamageEvent apiDamage = new GunsDamageEvent(p, victim, null, wid, def.damage, kb);
+                    Bukkit.getPluginManager().callEvent(apiDamage);
+                    if (!apiDamage.isCancelled()) {
+                        victim.damage(Math.max(0.0, apiDamage.getDamage()), p);
+                        if (apiDamage.getKnockbackForce() > 0.0) {
+                            org.bukkit.util.Vector push = victim.getLocation().toVector().subtract(p.getLocation().toVector()).normalize().multiply(apiDamage.getKnockbackForce() / 10.0);
+                            victim.setVelocity(victim.getVelocity().add(push));
+                        }
                         remainingVictims = (remainingVictims == Integer.MAX_VALUE) ? Integer.MAX_VALUE : remainingVictims - 1;
                         if (remainingVictims == 0) break;
                     }
@@ -553,18 +571,18 @@ public class WeaponListener implements Listener {
         if (def != null && def.headshotEnable && headshot) {
             dmg = Math.max(0.0, dmg + def.headshotBonusDamage);
         }
-        WeaponEvents.WeaponDamageEntityEvent we = new WeaponEvents.WeaponDamageEntityEvent(p, title, e.getEntity(), proj, dmg);
-        Bukkit.getPluginManager().callEvent(we);
-        if (we.isCancelled()) { e.setCancelled(true); return; }
-        e.setDamage(we.getDamage());
-        // Abilities: knockback on hit
-        if (def.abilityKnockback > 0 && e.getEntity() instanceof LivingEntity) {
+        double knockback = def != null ? Math.max(0.0, def.abilityKnockback) : 0.0;
+        GunsDamageEvent apiDamage = new GunsDamageEvent(p, e.getEntity(), proj, title, dmg, knockback);
+        Bukkit.getPluginManager().callEvent(apiDamage);
+        if (apiDamage.isCancelled()) { e.setCancelled(true); return; }
+        e.setDamage(Math.max(0.0, apiDamage.getDamage()));
+        if (apiDamage.getKnockbackForce() > 0.0 && e.getEntity() instanceof LivingEntity) {
             LivingEntity victim = (LivingEntity) e.getEntity();
-            org.bukkit.util.Vector kb = victim.getLocation().toVector().subtract(p.getLocation().toVector()).normalize().multiply(def.abilityKnockback / 10.0);
+            org.bukkit.util.Vector kb = victim.getLocation().toVector().subtract(p.getLocation().toVector()).normalize().multiply(apiDamage.getKnockbackForce() / 10.0);
             victim.setVelocity(victim.getVelocity().add(kb));
         }
         // Abilities: reset hit cooldown (reduce noDamageTicks)
-        if (def.abilityResetHitCooldown && e.getEntity() instanceof LivingEntity) {
+        if (def != null && def.abilityResetHitCooldown && e.getEntity() instanceof LivingEntity) {
             LivingEntity victim = (LivingEntity) e.getEntity();
             victim.setNoDamageTicks(0);
         }

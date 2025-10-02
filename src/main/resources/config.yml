@@ -1,3 +1,6 @@
 debug: true
 
+# Optional mapping of legacy weapon IDs to current canonical IDs
+aliases: {}
+
 

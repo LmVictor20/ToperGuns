@@ -5,9 +5,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.ServicePriority;
 import org.lmvictor20.toperguns.command.GiveWeaponCommand;
 import org.lmvictor20.toperguns.listener.WeaponListener;
 import org.lmvictor20.toperguns.weapon.WeaponManager;
+import org.lmvictor20.toperguns.api.GunsAPI;
+import org.lmvictor20.toperguns.api.impl.GunsAPIImpl;
 
 public class ToperGunsPlugin extends JavaPlugin {
 
@@ -28,6 +31,10 @@ public class ToperGunsPlugin extends JavaPlugin {
         this.weaponManager.reload();
 
         Bukkit.getPluginManager().registerEvents(new WeaponListener(this), this);
+
+        // Register public API as a Bukkit service
+        GunsAPI api = new GunsAPIImpl(this);
+        Bukkit.getServicesManager().register(GunsAPI.class, api, this, ServicePriority.Normal);
 
         PluginCommand give = getCommand("giveweapon");
         if (give != null) {
